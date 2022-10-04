@@ -11,6 +11,7 @@
       "dom.iterable"
     ],
     "moduleResolution": "Node",
-    "jsx": "preserve"
+    "jsx": "preserve",
+	"include": ["env.d.ts"]
   }
 }
