@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Add Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.ts"></script>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+
+    <div id="floating-panel">
+      <strong>Start:</strong>
+      <select id="start">
+        <option value="17 A. Gabuya St, Cebu City, 6000 Cebu">Cebu City</option>
+        <option value="17 A. Gabuya St, Cebu City, 6000 Cebu">Cebu City</option>
+        <option value="6Q75+6C5, Dakbayan sa Naga, Lalawigan ng Cebu">
+          City of Naga
+        </option>
+        <option value="8VJR+M7P, Lungsod ng Cebu, Lalawigan ng Cebu">
+          Lahug
+        </option>
+        <option value="8WHV+25Q, Mandaue City, 6014 Cebu">Mandaue City</option>
+      </select>
+      <br />
+      <strong>End:</strong>
+      <select id="end">
+        <option value="6QQG+5XF Dakbayan sa Naga, Lalawigan ng Cebu">
+          Filipino Restaurant - MINGLANILLA PH
+        </option>
+        <option value="6Q65+2JJ Dakbayan sa Naga, Lalawigan ng Cebu">
+          Korean Restaurant - NAGA PH
+        </option>
+        <option value="7R4J+HR8 Talisay, Lalawigan ng Cebu">
+          Japanese Restaurant - TALISAY PHO
+        </option>
+      </select>
+    </div>
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar"></div>
+    </div>
+    <div style="display: none">
+      <div id="floating-panel">
+        <strong>Start:</strong>
+        <select id="start">
+          <option value="17 A. Gabuya St, Cebu City, 6000 Cebu">
+            Cebu City
+          </option>
+          <option value="6Q75+6C5, Dakbayan sa Naga, Lalawigan ng Cebu">
+            City of Naga
+          </option>
+          <option value="8VJR+M7P, Lungsod ng Cebu, Lalawigan ng Cebu">
+            Lahug
+          </option>
+          <option value="8WHV+25Q, Mandaue City, 6014 Cebu">
+            Mandaue City
+          </option>
+        </select>
+        <br />
+        <strong>End:</strong>
+        <select id="end">
+          <option value="6QQG+5XF Dakbayan sa Naga, Lalawigan ng Cebu">
+            Filipino Restaurant - MINGLANILLA PH
+          </option>
+          <option value="6Q65+2JJ Dakbayan sa Naga, Lalawigan ng Cebu">
+            Korean Restaurant - NAGA PH
+          </option>
+          <option value="7R4J+HR8 Talisay, Lalawigan ng Cebu">
+            Japanese Restaurant - TALISAY PHO
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places&libraries=geometry&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
