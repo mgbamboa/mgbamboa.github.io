@@ -1,0 +1,10 @@
+import sdk from '@stackblitz/sdk'
+
+sdk.embedProjectId(
+  'elementOrId',
+  'github-zmdurn',
+  {
+    forceEmbedLayout: true,
+    openFile: '.eslintrc.json',
+  }
+);
